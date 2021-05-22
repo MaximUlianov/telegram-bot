@@ -19,5 +19,32 @@ telegram:
       contacts-page: https://www.db.by/contact/
 
 schedule:
-  fixedDelayMs: 86400000
+  fixedDelayMs: 5000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:5433/botdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: umaxim2000@gmail.com
+    password: 14filuvu
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+email:
+  recipient:
+    address: umaxim2000@mail.ru
 

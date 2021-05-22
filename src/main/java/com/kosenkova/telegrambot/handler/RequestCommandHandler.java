@@ -1,42 +1,36 @@
 package com.kosenkova.telegrambot.handler;
 
-import com.kosenkova.telegrambot.handler.util.ButtonUtil;
+import com.kosenkova.telegrambot.handler.mode.request.RequestModeInfo;
 import com.kosenkova.telegrambot.model.UserCommand;
 import com.vdurmont.emoji.EmojiParser;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.io.Serializable;
 
-@Service
+@Component
+@Slf4j
 @RequiredArgsConstructor
-public class ContactsCommandHandler implements UserCommandHandler {
+public class RequestCommandHandler implements UserCommandHandler {
 
-    @Value("${telegram.bot.text.contacts}")
-    private String contactsText;
-
-    @Value("${telegram.bot.link.contacts-page}")
-    private String contactsPageLink;
-
-    private final ButtonUtil buttonUtil;
+    private final RequestModeInfo requestModeInfo;
 
     @Override
     public UserCommand getHandlerCommand() {
-        return UserCommand.CONTACTS;
+        return UserCommand.REQUEST;
     }
 
     @Override
     public PartialBotApiMethod<? extends Serializable> handleCommandMessage(String chatId) {
 
+        requestModeInfo.activateRequestMode(chatId);
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText(EmojiParser.parseToUnicode(contactsText));
-        sendMessage.enableMarkdown(true);
-        sendMessage.setReplyMarkup(buttonUtil.getKeyboardOfLinkAndBackButton("Ссылка", contactsPageLink));
+        sendMessage.setText(EmojiParser.parseToUnicode("Пожалуйста, введите ваше имя"));
+
         return sendMessage;
     }
 }

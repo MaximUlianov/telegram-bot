@@ -4,13 +4,13 @@ import com.kosenkova.telegrambot.handler.util.ButtonUtil;
 import com.kosenkova.telegrambot.model.UserCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.io.Serializable;
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class PortfolioCommandHandler implements UserCommandHandler {
 

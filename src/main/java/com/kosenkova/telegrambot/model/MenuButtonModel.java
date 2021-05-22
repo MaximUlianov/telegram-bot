@@ -8,4 +8,6 @@ public class MenuButtonModel {
     private String name;
 
     private String command;
+
+    private String link;
 }
