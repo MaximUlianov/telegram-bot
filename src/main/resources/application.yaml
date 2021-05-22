@@ -1,0 +1,23 @@
+telegram:
+  bot:
+    username: popovTest_bot
+    token: 1873853183:AAGKpsV1VDTIlgu0u7mSU9P45sX8_tSQDRg
+    text:
+      start: Здравствуйте. Вас приветствует Телеграмм-бот от компании “Студия Борового”. Здесь вы можете найти всю интересующую Вас информацию.
+      about: О нас какой-то текст
+      main-menu: Главное меню
+      benefits: Текст о преимуществах
+      portfolio: Чо-та про портфолио
+      faq: Факью ноу факью
+      prices: "Цены ту мач конечно :joy:"
+      feedbacks: Нормальная контора
+      contacts: Номерок блатной [+375296664441](tel:+375296664441)
+    link:
+      about-page: https://www.db.by/about/
+      portfolio-page: https://www.db.by/portfolio/
+      feedbacks-page: https://www.db.by/about/client-reviews/
+      contacts-page: https://www.db.by/contact/
+
+schedule:
+  fixedDelayMs: 86400000
+

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "О компании",
+    "command": "/about"
+  },
+  {
+    "name": "Наши услуги",
+    "command": "/services"
+  },
+  {
+    "name": "Наши преимущества",
+    "command": "/benefits"
+  },
+  {
+    "name": "Портфолио",
+    "command": "/portfolio"
+  },
+  {
+    "name": "FAQ",
+    "command": "/faq"
+  },
+  {
+    "name": "Цены",
+    "command": "/prices"
+  },
+  {
+    "name": "Отзывы клиентов",
+    "command": "/feedbacks"
+  },
+  {
+    "name": "Контакты",
+    "command": "/contacts"
+  },
+  {
+    "name": "Оставить заявку",
+    "command": "/request"
+  },
+  {
+    "name": "Задать вопрос",
+    "command": "/question"
+  }
+]
