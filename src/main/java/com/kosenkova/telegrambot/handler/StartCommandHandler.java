@@ -16,8 +16,11 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 public class StartCommandHandler implements UserCommandHandler {
 
-    @Value("${telegram.bot.text.start}")
-    private String startText;
+    private final String startText = """
+            Здравствуйте.
+            Вас приветствует Телеграмм-бот от компании “Студия Борового”.
+            Здесь вы можете найти всю интересующую Вас информацию.
+            """;
 
     private final ButtonUtil buttonUtil;
 

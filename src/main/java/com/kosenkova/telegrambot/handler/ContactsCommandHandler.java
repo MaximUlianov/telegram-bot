@@ -16,8 +16,20 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 public class ContactsCommandHandler implements UserCommandHandler {
 
-    @Value("${telegram.bot.text.contacts}")
-    private String contactsText;
+    private final String contactsText = """
+            Мы находимся по адресу:
+            :office: г. Минск, ул. Шафарнянская, 11 (БЦ «Порт»), офис 325 (I), 220125.
+                        
+            По поводу разработки сайта с нами можно связаться по номеру:
+            :phone: +375 (29) 694-22-80 Velcom 
+            или электронной почте:
+            :e-mail: info@db.by.
+                        
+            По поводу продвижения сайта с нами можно связаться по номеру:
+            :phone: +375 (29) 631-85-98 Velcom 
+            или по электронной почте:
+            :e-mail: seo@db.by.        
+            """;
 
     @Value("${telegram.bot.link.contacts-page}")
     private String contactsPageLink;

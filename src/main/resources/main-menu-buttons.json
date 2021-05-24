@@ -1,42 +1,42 @@
 [
   {
-    "name": "О компании",
+    "name": ":office:О компании",
     "command": "/about"
   },
   {
-    "name": "Наши услуги",
+    "name": ":woman_fairy:Наши услуги",
     "command": "/services"
   },
   {
-    "name": "Наши преимущества",
+    "name": ":star2:Наши преимущества",
     "command": "/benefits"
   },
   {
-    "name": "Портфолио",
+    "name": ":open_file_folder:Портфолио",
     "command": "/portfolio"
   },
   {
-    "name": "FAQ",
+    "name": ":question:FAQ",
     "command": "/faq"
   },
   {
-    "name": "Цены",
+    "name": ":moneybag:Цены",
     "command": "/prices"
   },
   {
-    "name": "Отзывы клиентов",
+    "name": ":hugging:Отзывы клиентов",
     "command": "/feedbacks"
   },
   {
-    "name": "Контакты",
+    "name": ":telephone_receiver:Контакты",
     "command": "/contacts"
   },
   {
-    "name": "Оставить заявку",
+    "name": ":mailbox:Оставить заявку",
     "command": "/request"
   },
   {
-    "name": "Задать вопрос",
+    "name": ":thinking:Задать вопрос",
     "command": "/question"
   }
 ]

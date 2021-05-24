@@ -2,6 +2,7 @@ package com.kosenkova.telegrambot.handler;
 
 import com.kosenkova.telegrambot.handler.util.ButtonUtil;
 import com.kosenkova.telegrambot.model.UserCommand;
+import com.vdurmont.emoji.EmojiParser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -15,8 +16,7 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 public class FeedbacksCommandHandler implements UserCommandHandler {
 
-    @Value("${telegram.bot.text.feedbacks}")
-    private String feedbacksText;
+    private final String feedbacksText = "Отзывы наших клиентов вы можете прочитать здесь:point_down:";
 
     @Value("${telegram.bot.link.feedbacks-page}")
     private String feedbacksPageLink;
@@ -33,7 +33,7 @@ public class FeedbacksCommandHandler implements UserCommandHandler {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText(feedbacksText);
+        sendMessage.setText(EmojiParser.parseToUnicode(feedbacksText));
         sendMessage.enableMarkdown(true);
         sendMessage.setReplyMarkup(buttonUtil.getKeyboardOfLinkAndBackButton("Ссылка", feedbacksPageLink));
         return sendMessage;

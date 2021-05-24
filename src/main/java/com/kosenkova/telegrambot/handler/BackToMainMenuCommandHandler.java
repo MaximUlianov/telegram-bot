@@ -14,8 +14,7 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 public class BackToMainMenuCommandHandler implements UserCommandHandler {
 
-    @Value("${telegram.bot.text.main-menu}")
-    private String mainMenuText;
+    private final String mainMenuText = "Главное меню:";
 
     private final ButtonUtil buttonUtil;
 

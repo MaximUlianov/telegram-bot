@@ -16,8 +16,11 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 public class PricesCommandHandler implements UserCommandHandler {
 
-    @Value("${telegram.bot.text.prices}")
-    private String pricesText;
+    private final String pricesText = """
+            Цены:
+            :balloon:Стоимость разработки сайта -  от 1000 б.р.
+            :balloon:Стоимость работ по продвижению в месяц - от 700 б.р.
+            """;
 
     private final ButtonUtil buttonUtil;
 
